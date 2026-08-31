@@ -4,73 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS 180 Project 0 — Zihan WANG</title>
+    <meta name="description" content="CS 180 Project 0 — Becoming Friends with Your Camera">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="page-shell">
+        <header>
+            <nav class="navbar" aria-label="Main navigation">
+                <div class="logo">CS 180 · Project 0</div>
+                <ul class="menu">
+                    <li><a href="#part1">Part 1</a></li>
+                    <li><a href="#part2">Part 2</a></li>
+                    <li><a href="#part3">Part 3</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">CS 180 · Project 0</div>
-            <ul class="menu">
-                <li><a href="#part1">Part 1</a></li>
-                <li><a href="#part2">Part 2</a></li>
-                <li><a href="#part3">Part 3</a></li>
-            </ul>
-        </nav>
-    </header>
+        <main>
+            <section class="hero">
+                <div class="hero-copy">
+                    <p class="eyebrow">UC Berkeley · CS180/280A: Intro to Computer Vision and Computational Photography</p>
+                    <h1>Fun with Filters &amp; Frequencies</h1>
+                    <p class="subtitle">In this project, we want you to become friends with every pixel. The first step toward this goal is to become friends with your camera—e.g., the one in your smartphone. In particular, the goal of this project is to get you some intuitive understanding of the somewhat subtle relationship between perspective, focal length/zoom, and the center of projection.</p>
+                    <div class="hero-meta">
+                        <span>Zihan WANG</span>
+                        <span>Fall 2026</span>
+                        <span>ucb123090601@berkeley.edu</span>
+                    </div>
+                </div>
+            </section>
 
-    <section class="hero">
-        <h1>Project 0 — Fun with Filters & Frequencies</h1>
-        <p>UC Berkeley CS 180 · Computational Photography · Fall 2026</p>
-        <p>Prince WANG · ucb123090601@berkeley.edu</p>
-    </section>
+            <section class="info-grid" aria-label="Project highlights">
+                <article class="info-card">
+                    <span class="label">Task</span>
+                    <h3>Filters</h3>
+                    <p>Compare focal length and aperture to match subject scale while preserving natural depth cues.</p>
+                </article>
+                <article class="info-card">
+                    <span class="label">Task</span>
+                    <h3>Frequencies</h3>
+                    <p>Study how viewpoint and perspective change the visual structure of a scene in the frequency domain.</p>
+                </article>
+                <article class="info-card">
+                    <span class="label">Task</span>
+                    <h3>Animation</h3>
+                    <p>Show the visual transition between lens and viewpoint effects in a compact animated demonstration.</p>
+                </article>
+            </section>
 
-    <!-- ======== Part 1 ======== -->
-    <section id="part1" class="section">
-        <h2>Part 1 — Filters</h2>
-        <p class="part-intro">We get a typical distorted selfie image. Now step back several feet from your subject, zoom in, and take a second picture. Try to get the face in the second photo to be the same size as in the first photo。</p>
-        <div class="image-pair">
-            <figure>
-                <img src="images/f2.8 85mm.jpg" alt="Part 1 — result image A">
-                <figcaption>The image is f2.8 & 85mm。</figcaption>
-            </figure>
-            <figure>
-                <img src="images/f1.8 50mm.jpg" alt="Part 1 — result image B">
-                <figcaption>The image is f1.8 & 50mm。</figcaption>
-            </figure>
-        </div>
-    </section>
+            <section id="part1" class="section-card">
+                <div class="section-header">
+                    <span class="section-tag">Part 1</span>
+                    <h2>Filters</h2>
+                </div>
+                <p class="part-intro">We begin with a distorted selfie and then re-shoot from a farther distance while zooming in, so the subject remains the same size in both frames. The key idea is to isolate how focal length and framing shape depth cues.</p>
+                <div class="image-pair">
+                    <figure class="image-card">
+                        <img src="images/f2.8 85mm.jpg" alt="Selfie shot taken with f2.8 and 85mm lens">
+                        <figcaption>f/2.8 · 85mm</figcaption>
+                    </figure>
+                    <figure class="image-card">
+                        <img src="images/f1.8 50mm.jpg" alt="Selfie shot taken with f1.8 and 50mm lens">
+                        <figcaption>f/1.8 · 50mm</figcaption>
+                    </figure>
+                </div>
+            </section>
 
-    <!-- ======== Part 2 ======== -->
-    <section id="part2" class="section">
-        <h2>Part 2 — Frequencies</h2>
-        <p class="part-intro">Let's repeat the same procedure in reverse, for an urban scene. Pick an empty field with a nice building facade in the background (not totally frontal). Zoom in, and take a photo of the building. Now, walk toward the building, and take a second photo, now without zoom, such that the building in the two photos appears approximately the same size. The first picture should look flattened, or compressed, compared to the second.</p>
-        <div class="image-pair">
-            <figure>
-                <img src="images/part2-far.jpg" alt="Part 2 — result image A">
-                <figcaption>Far view with zoom。</figcaption>
-            </figure>
-            <figure>
-                <img src="images/part2-close.jpg" alt="Part 2 — result image B">
-                <figcaption>Close view without zoom。</figcaption>
-            </figure>
-        </div>
-    </section>
+            <section id="part2" class="section-card">
+                <div class="section-header">
+                    <span class="section-tag">Part 2</span>
+                    <h2>Frequencies</h2>
+                </div>
+                <p class="part-intro">This experiment repeats the same viewpoint comparison for an urban scene. A zoomed far-shot appears flattened, while the closer capture preserves stronger perspective and contrast in the building geometry.</p>
+                <div class="image-pair">
+                    <figure class="image-card">
+                        <img src="images/part2-far.jpg" alt="Far urban scene captured with zoom">
+                        <figcaption>Far view with zoom</figcaption>
+                    </figure>
+                    <figure class="image-card">
+                        <img src="images/part2-close.jpg" alt="Close urban scene captured without zoom">
+                        <figcaption>Close view without zoom</figcaption>
+                    </figure>
+                </div>
+            </section>
 
-    <!-- ======== Part 3 ======== -->
-    <section id="part3" class="section">
-        <h2>Part 3 — Animation</h2>
-        <p class="part-intro">一段关于 Part 3 的介绍，说明这个动图展示的效果。</p>
-        <figure class="gif-box">
-            <img src="images/result.gif" alt="Part 3 — animated result">
-            <figcaption>动图的说明文字。</figcaption>
-        </figure>
-    </section>
+            <section id="part3" class="section-card">
+                <div class="section-header">
+                    <span class="section-tag">Part 3</span>
+                    <h2>Animation</h2>
+                </div>
+                <p class="part-intro">The final demonstration highlights how changing camera position and focal length affects the perception of shape, depth, and compression across a sequence of frames.</p>
+                <figure class="gif-box image-card">
+                    <img src="images/part2-close.jpg" alt="Animation preview for the motion study">
+                    <figcaption>Motion study preview — lens and viewpoint effects in a single scene.</figcaption>
+                </figure>
+            </section>
+        </main>
 
-    <footer>
-        <p>© 2026 Your Name · Built with GitHub Pages</p>
-        <p><a href="https://github.com/Prince200506">GitHub Profile</a> · <a href="mailto:yourname@berkeley.edu">Email</a></p>
-    </footer>
-
+        <footer>
+            <p>© 2026 Zihan WANG · Built with GitHub Pages</p>
+            <p>
+                <a href="https://github.com/Prince200506">GitHub Profile</a>
+                <span>·</span>
+                <a href="mailto:ucb123090601@berkeley.edu">Email</a>
+            </p>
+        </footer>
+    </div>
 </body>
 </html>
